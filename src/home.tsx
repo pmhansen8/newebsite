@@ -18,7 +18,7 @@ export const Home = () =>{
     return (
 
         <div className="form-container">
-            <h2>Please input your name:</h2>
+            <h2 className="texts">Please input your name:</h2>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
