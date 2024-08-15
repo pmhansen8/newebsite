@@ -1,39 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import fetch_from_dbd from "./fetch_from_dbd";
-import './App.css';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {Catpage} from "./cat_page";
+import {Home} from "./home";
+
 
 function App() {
-    const [imageUrl, setImageUrl] = useState();
-
-
-
-    function newpic() {
-        fetch_from_dbd()
-            .then(url => {
-                setImageUrl(url.url); // Set the fetched image URL in state
-            })
-            .catch(error => {
-                console.error('Error fetching the cat image:', error);
-            });
-    }
-
-    useEffect(() => {
-        newpic();
-    }, []);
-
-
+    document.title = "Portfolio"
     return (
-        <div className="App-header">
-
-                <p className="catheader">PATS CAT PICS</p>
-                {imageUrl ? (
-                    <img src={imageUrl} alt="A cute cat" style={{width: '300px', height: '300px'}}/>
-                ) : (
-                    <p>Loading...</p>
-                )}
-                <button  className="button" onClick={() => newpic()}>NEW CAT🐈</button>
-
-        </div>
+        <Router>
+            <Routes>
+                <Route path ="/" element={<Home />}/>
+                <Route path ="/catpage" element={<Catpage />}/>
+            </Routes>
+        </Router>
     );
 }
 
