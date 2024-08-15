@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh; /* Ensure the container takes up the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+.App-header {
+  min-height: 100vh;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row; /* Align title and image in a row */
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px; /* Limit the width for better alignment */
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Space between text and image */
+}
+
+.title {
+  font-size: 2em;
+  margin: 0; /* Remove default margin */
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.cat-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.button {
+  font-size: 1em;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.catheader{
+  font-size: 5em;
+}
