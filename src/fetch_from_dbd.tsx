@@ -1,5 +1,5 @@
-function fetch_from_dbd() {
-    return fetch(" https://api.thecatapi.com/v1/images/search")
+function fetch_from_dbd(input: any) {
+    return fetch(input)
         .then(response => {
             if (response.ok) {
                 return response.json();
